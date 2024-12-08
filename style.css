@@ -1,0 +1,125 @@
+/* Basic reset and styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1556155092-490a1ba16284') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Blurred overlay for contrast */
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(7px);
+    z-index: 0;
+  }
+  
+  /* Enhanced Glassmorphic Container */
+  .container {
+    position: relative;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    padding: 50px 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    width: 450px;
+    text-align: center;
+    z-index: 1;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .container:hover {
+    transform: scale(1.06);
+  }
+  
+  h2 {
+    margin-bottom: 24px;
+    font-weight: 600;
+    font-size: 1.7em;
+    color: #e0e0e0;
+  }
+  
+  /* Label Styling */
+  label {
+    display: block;
+    margin: 12px 0 6px;
+    text-align: left;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.85);
+  }
+  
+  /* Input Styling */
+  input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font-size: 1em;
+    outline: none;
+    transition: background 0.3s, box-shadow 0.3s, border 0.3s;
+  }
+  
+  input:focus {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid #00c9ff;
+  }
+  
+  /* Button with Gradient and Shadow */
+  button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: linear-gradient(135deg, #00c9ff, #92fe9d);
+    color: #fff;
+    font-size: 1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 8px 20px rgba(0, 201, 255, 0.4);
+  }
+  
+  button:hover {
+    transform: scale(1.04);
+    box-shadow: 0 12px 24px rgba(0, 201, 255, 0.6);
+  }
+  
+  /* Paragraph and Link Styling */
+  p {
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.85);
+  }
+  
+  a {
+    color: #92fe9d;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  a:hover {
+    color: #00c9ff;
+  }
+  
